@@ -1,0 +1,23 @@
+message Server
+{
+    required string  host = 1;  // str
+    required uint32  port = 2;  // ID
+    optional uint32  weight = 3;    //load banlance weight
+    //re-connect period after connection failure
+    optional uint32  fail_timeout =4 [default = 30];
+}
+
+message Service
+{
+    required string name = 1;
+    required string function = 2;
+    repeated Server server = 3;
+}
+
+message ServiceList
+{
+    optional uint32  timeout = 1 [default = 30];        //call overall lifetime
+    optional uint32  send_timeout = 2 [default = 10];   //call send timeout
+    optional uint32  read_timeout = 3 [default = 10];   //call recv timeout
+    repeated Service service = 4;
+}
