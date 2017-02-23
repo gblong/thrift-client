@@ -1,5 +1,5 @@
-#ifndef IQIYI_THRIFT_TRANSPORT_CONNECTION_H_
-#define IQIYI_THRIFT_TRANSPORT_CONNECTION_H_
+#ifndef ANET_THRIFT_TRANSPORT_CONNECTION_H_
+#define ANET_THRIFT_TRANSPORT_CONNECTION_H_
 
 #include <string>
 
@@ -197,4 +197,4 @@ class TConnection: public TSocket {
 
 }}}//net::thrift::transport
 
-#endif //IQIYI_THRIFT_TRANSPORT_CONNECTION_H_
+#endif //ANET_THRIFT_TRANSPORT_CONNECTION_H_
